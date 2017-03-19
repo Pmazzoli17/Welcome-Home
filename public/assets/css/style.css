@@ -1,0 +1,56 @@
+/*font-family: 'Luckiest Guy', cursive;
+font-family: 'Delius Unicase', cursive;
+font-family: 'Neucha', cursive;
+font-family: 'Cherry Cream Soda', cursive;*/
+
+body {
+    font-family: 'Kalam', cursive;
+}
+
+
+#navbar {
+	outline-style: dashed;
+}
+
+
+.main-section {
+    /*background-color:rgba(44, 36, 36, 0.81);*/
+    max-width: 900px;
+    margin:0 auto;
+    background-color: white;
+    font-family: 'Cherry Cream Soda', cursive;
+}	
+
+
+#title{
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+
+/*.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+}*/
+
+.container {
+        background-image: url('../images/welcomeDoor1.jpg');
+        width: 100%;
+}
+
+.entry-box {
+    background-color: grey;
+
+}
+
+#input-form {
+    width: 500px;
+        margin:0 auto;
+}
