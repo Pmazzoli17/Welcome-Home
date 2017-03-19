@@ -112,10 +112,10 @@ body {
   display: block;
 }
 
-#brewery, #grocery {
+#school, #brewery {
     margin-left: 85px;
 }
-#grocery {
+#brewery {
     clear: both;
 }
 
