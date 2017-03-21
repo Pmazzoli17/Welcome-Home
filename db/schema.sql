@@ -1,1 +1,5 @@
-schema.sql
+-- First and Last Name
+-- Address
+-- Email Address
+-- Zip Code
+-- Photo Link
