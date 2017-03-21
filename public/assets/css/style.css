@@ -1,8 +1,10 @@
-/*font-family: 'Luckiest Guy', cursive;
+/* -------------------------------------FONTS USED-----------------------------------
+
+font-family: 'Luckiest Guy', cursive;
 font-family: 'Delius Unicase', cursive;
 font-family: 'Neucha', cursive;
 font-family: 'Cherry Cream Soda', cursive;*/
-
+/* -------------------------------------All Pages----------------------------------*/
 body {
     font-family: 'Kalam', cursive;
 }
@@ -12,14 +14,7 @@ body {
 	outline-style: dashed;
 }
 
-
-.main-section {
-    /*background-color:rgba(44, 36, 36, 0.81);*/
-    max-width: 900px;
-    margin:0 auto;
-    background-color: white;
-    font-family: 'Cherry Cream Soda', cursive;
-}	
+	
 
 
 #title{
@@ -30,20 +25,15 @@ body {
 }
 
 
-/*.container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-
-}*/
-
 .container {
         background-image: url('../images/welcomeDoor1.jpg');
         width: 100%;
 }
+
+#footer {
+    padding-top: 25px;
+}
+/* --------------------------Main Page Only------------------------------------*/
 
 .entry-box {
     background-color: grey;
@@ -52,5 +42,82 @@ body {
 
 #input-form {
     width: 500px;
-        margin:0 auto;
+    margin:0 auto;
 }
+
+
+.main-section {
+    /*background-color:rgba(44, 36, 36, 0.81);*/
+    max-width: 900px;
+    margin:0 auto;
+    background-color: white;
+    font-family: 'Cherry Cream Soda', cursive;
+    border-radius: 5%;
+    margin-bottom: 25px;
+}
+/* -----------------------------------------Search Page Only------------------------------------*/
+
+.search-icon {
+    width: 100px;
+    float: left;
+    margin-left: 42px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 5%;
+    background-color: grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    color: #fff;
+    padding: 4px 8px 5px;
+    border: 1px solid #9fa3a7;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #008fcf;
+    box-shadow:
+        0 1px 0 rgba(0,0,0,.08),
+        inset 0 1px 2px rgba(255,255,255,.67),
+        inset 0 -1px 0 rgba(0,0,0,.14);
+    background-image: -moz-linear-gradient(90deg, #a3a9ad 0%, #c5c9cd 100%);
+    background-image: -o-linear-gradient(90deg, #a3a9ad 0%, #c5c9cd 100%);
+    background-image: -webkit-linear-gradient(90deg, #a3a9ad 0%, #c5c9cd 100%);
+    background-image: linear-gradient(90deg, #a3a9ad 0%, #c5c9cd 100%);
+}
+
+#search-section {
+    background-color: white;
+    height: 350px;
+    margin:0 auto;
+    width: 700px;
+    border-radius: 5%;
+    margin-bottom: 25px;
+}
+
+.icon{
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 40px;
+  height: 75px;
+  display: block;
+}
+
+#school, #brewery {
+    margin-left: 85px;
+}
+#brewery {
+    clear: both;
+}
+
+
+
