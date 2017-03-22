@@ -15,7 +15,9 @@
 
 <script src="https://use.fontawesome.com/c606ab7025.js"></script>
 
-<link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
 </head>
 
@@ -117,7 +119,7 @@
 				</div>					
 
 				<div class = "search-icon" id="park">
-				    <a href="parkPage.html" target="_blank">
+				    <a href="">
 	  					<div class="nav"><i class="fa fa-tree fa-5x" aria-hidden="true"></i>
 	   					Parks
 	   					</div>
@@ -125,13 +127,32 @@
 				</div>		
 
 				<div class = "search-icon" id="events">
-				    <a href="eventPage.html" target="_blank">
+				    <a href="">
 	  					<div class="nav"><i class="fa fa-music fa-5x" aria-hidden="true"></i>
 	   					Events
+	   			<input id = "searchButtons" type="button" name="answer" value="Show Div" onclick="showDiv()" />		
+				<div>
+					
+				</div>		
+
 	   					</div>
 					</a>
 				</div>																			
 		</div>
+		<div>
+
+		</div>
+
+				<div id="resultsDiv"  style="display:none;" class="answer_list" >
+
+				<div id = "resultsTitle">
+				<h2>Here are your results!</h2>
+				</div>
+
+
+
+				</div>
+
 		<!--Footer-->
 		<div id = 'footer'>footer
 			<nav class="navbar navbar-default navbar-fixed-bottom">
@@ -157,13 +178,19 @@
 			      <ul class="nav navbar-nav navbar-right">
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
-			  </div><!-- /.container-fluid -->
+			  </div>
+			  <!-- /.container-fluid -->
 			</nav>
+		</div>		
+	</div>
 
-		</div>
+		<!--javascript-->
 
-
-		<!--Modal-->
+		<script type="text/javascript">
+			function showDiv() {
+   document.getElementById('resultsDiv').style.display = "block";
+}
+		</script>
 
 
 </body>
