@@ -119,11 +119,20 @@ body {
     clear: both;
 }
 
+
 #resultsDiv {
     background-color: white;
     height: 200px;
     border-radius: 10px;
 }
+
+/* ----------------------- OUR TEAM PAGE -----------------------  */
+
+#ourteam {
+    font-family: 'Kalam', sans-serif;
+    /*font-family: 'Roboto Condensed', sans-serif;*/
+}
+
 
 #resultsTitle {
     padding: 20px;
