@@ -96,7 +96,7 @@ body {
     height: 350px;
     margin:0 auto;
     width: 700px;
-    border-radius: 5%;
+    border-radius: 10px;
     margin-bottom: 25px;
 }
 
@@ -119,6 +119,13 @@ body {
     clear: both;
 }
 
+
+#resultsDiv {
+    background-color: white;
+    height: 200px;
+    border-radius: 10px;
+}
+
 /* ----------------------- OUR TEAM PAGE -----------------------  */
 
 #ourteam {
@@ -127,5 +134,10 @@ body {
 }
 
 
+#resultsTitle {
+    padding: 20px;
+}
 
-
+#searchButtons {
+    display: none;
+}
