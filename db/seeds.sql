@@ -1,3 +1,3 @@
-INSERT INTO users (firstLast_name, address, email, zip_code, photo) VALUES ('Melissa Munson', 'some place', 'melymelm@email.com', 27605, 'https://s-media-cache-ak0.pinimg.com/236x/14/b3/59/14b359b2ff15a3c7603c6466b59e19d6.jpg');
+-- INSERT INTO users (firstLast_name, address, email, zip_code, photo) VALUES ('Melissa Munson', 'some place', 'melymelm@email.com', 27605, 'https://s-media-cache-ak0.pinimg.com/236x/14/b3/59/14b359b2ff15a3c7603c6466b59e19d6.jpg');
 
-INSERT INTO users (firstLast_name, address, email, zip_code, photo) VALUES ('Bob Bobson', '555 Main St.', 'bob@bob.com', 99999, 'http://ic.c4assets.com/brands/the-it-crowd/series-1/episode-2/fe20829f-d638-4392-a95b-453d5081be9d.jpg?interpolation=progressive-bicubic&output-quality=90');
+-- INSERT INTO users (firstLast_name, address, email, zip_code, photo) VALUES ('Bob Bobson', '555 Main St.', 'bob@bob.com', 99999, 'http://ic.c4assets.com/brands/the-it-crowd/series-1/episode-2/fe20829f-d638-4392-a95b-453d5081be9d.jpg?interpolation=progressive-bicubic&output-quality=90');

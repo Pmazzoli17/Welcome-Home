@@ -20,28 +20,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// app.use(express.static(__dirname + '/public'));
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(methodOverride('_method'));
-// app.engine('handlebars', exphbs({ defaultLayout: 'main'
-// }));
-// app.set('view engine', 'handlebars');
-
-// Static directory
-// app.use(express.static("./public"));
 app.use(express.static(__dirname + '/public'));
-
-// // Import routes and give the server access to them.
-// var routes = require('./controllers/controller.js');
-// app.use('/', routes);
 
 // Routes
 require("./routes/html-routes.js")(app);
-// require("./routes/post-api-routes.js")(app);
-// require("./routes/author-api-routes.js")(app);
-
-// // Starts the server to begin listening
-// app.listen(port);
+require("./routes/api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: true }).then(function() {
