@@ -44,8 +44,6 @@ module.exports = function(app) {
       address: req.body.address,
       email: req.body.email,
       zip: req.body.zip,
-      // body: req.body.body
-      // category: req.body.category
     })
     // then return the result using res.json
     .then(function(dbPost) {
