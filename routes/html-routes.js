@@ -29,8 +29,8 @@ module.exports = function(app) {
   });
 
   // authors route loads author-manager.html(breweryPage.html)
-  app.get("/breweryPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/breweryPage.html"));
+  app.get("/teamPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/teamPage.html"));
   });
 
 };
