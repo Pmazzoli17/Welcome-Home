@@ -1,11 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "database_development",
+    "password": "",
+    "database": "blogger4",
     "host": "localhost",
-    "dialect": "mysql",
-    "port": 8889
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

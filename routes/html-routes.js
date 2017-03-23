@@ -14,23 +14,27 @@ module.exports = function(app) {
 
   // index route loads view.html(mainPage.html)
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/mainPage.html"));
+    res.sendFile(path.join(__dirname, "../public/mainPage.html"));
   });
 
   // cms route loads cms.html (searchPage.html)
   app.get("/searchPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/searchPage.html"));
+    res.sendFile(path.join(__dirname, "../public/searchPage.html"));
   });
 
   // blog route loads blog.html
   // mainPage route loads mainPage.html
   app.get("/mainPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/mainPage.html"));
+    res.sendFile(path.join(__dirname, "../public/mainPage.html"));
   });
 
   // authors route loads author-manager.html(breweryPage.html)
   app.get("/breweryPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/breweryPage.html"));
+    res.sendFile(path.join(__dirname, "../public/breweryPage.html"));
+  });
+
+  app.get("/neighborhoodPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/neighborhoodPage.html"));
   });
 
 };
