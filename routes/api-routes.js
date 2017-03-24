@@ -42,8 +42,11 @@ module.exports = function(app) {
     db.Post.create({
       name: req.body.name,
       address: req.body.address,
-      email: req.body.email,
+      city: req.body.city,
+      state: req.body.state,
       zip: req.body.zip,
+      email: req.body.email,
+      moveFrom: req.body.moveFrom,
       photo: req.body.photo
     })
     // then return the result using res.json

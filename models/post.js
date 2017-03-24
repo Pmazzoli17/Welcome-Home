@@ -14,6 +14,28 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+      city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+      state: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+      zip: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      isNumeric: true,
+      validate: {
+        len: [5]
+      }
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false, 
@@ -22,12 +44,11 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    zip: {
+    moveFrom: {
       type: DataTypes.STRING,
       allowNull: false,
-      isNumeric: true,
       validate: {
-        len: [5]
+        len: [1]
       }
     },
     photo: {
