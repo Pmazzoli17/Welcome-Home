@@ -18,6 +18,7 @@ $(document).ready(function() {
   var addressInput = $("#address");
   var emailInput = $("#email-address");
   var zipInput = $("#zip-code");
+  var photoInput = $("#photo");
   var mainPageForm = $("#mainPage");
   // var postCategorySelect = $("#category");
   // // Giving the postCategorySelect a default value
@@ -34,7 +35,8 @@ $(document).ready(function() {
       name: nameInput.val().trim(),
       address: addressInput.val().trim(),
       email: emailInput.val().trim(),
-      zip: zipInput.val().trim()
+      zip: zipInput.val().trim(),
+      photo: photoInput.val().trim()
       // body: bodyInput.val().trim()
     };
 
@@ -68,6 +70,7 @@ $(document).ready(function() {
         addressInput.val(data.address);
         emailInput.val(data.email);
         zipInput.val(data.zip);
+        photoInput.val(data.photo);
         // bodyInput.val(data.body);
         
         // If we have a post with this id, set a flag for us to know to update the post
