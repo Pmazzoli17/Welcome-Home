@@ -30,12 +30,16 @@ module.exports = function(app) {
   // teamPage route loads teamPage.html)
   app.get("/teamPage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/teamPage.html"));
-  });
+  });  
+
 
   // neighborhoodPage route loads neighborhoodPage.html)
   app.get("/neighborhoodPage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/neighborhoodPage.html"));
+  });
 
+    app.get("/resultsPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/resultsPage.html"));
   });
 
 };

@@ -10,8 +10,8 @@ body {
 }
 
 .jumbotron {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
     padding-top: 1px;
     margin-top: 10px;
 }
@@ -38,7 +38,10 @@ body {
 
 #footer {
     padding-top: 25px;
+    color: #9b0707;
 }
+
+
 /* --------------------------Main Page Only------------------------------------*/
 
 .entry-box {
@@ -58,7 +61,7 @@ body {
     margin:0 auto;
     background-color: white;
     font-family: 'Cherry Cream Soda', cursive;
-    border-radius: 5%;
+
     margin-bottom: 25px;
     padding-bottom: 5px;
 }
@@ -75,7 +78,7 @@ body {
     margin-left: 42px;
     margin-top: 50px;
     text-align: center;
-    border-radius: 5%;
+    border-radius: 10%;
     background-color: grey;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -149,8 +152,7 @@ body {
 /* ----------------------- OUR TEAM PAGE -----------------------  */
 
 #ourteam {
-    font-family: 'Kalam', sans-serif;
-    /*font-family: 'Roboto Condensed', sans-serif;*/
+    font-family: 'Cherry Cream Soda', cursive;
 }
 
 
@@ -160,4 +162,14 @@ body {
 
 #searchButtons {
     display: none;
+}
+
+.card {
+
+}
+
+/* ---------------------RESULTS TABLE----------------------------- */
+
+#resultsTable {
+height: 300px;
 }
