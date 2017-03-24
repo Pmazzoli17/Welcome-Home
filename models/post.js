@@ -30,11 +30,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [5]
       }
     }
-    // body: {
-    //   type: DataTypes.TEXT,
-    //   allowNull: false,
-    //   len: [1]
-    // }
   });
   return Post;
 };

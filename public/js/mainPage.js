@@ -36,7 +36,6 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       zip: zipInput.val().trim()
       // body: bodyInput.val().trim()
-      // category: postCategorySelect.val()
     };
 
     console.log(newPost)
@@ -70,7 +69,6 @@ $(document).ready(function() {
         emailInput.val(data.email);
         zipInput.val(data.zip);
         // bodyInput.val(data.body);
-        // postCategorySelect.val(data.category);
         
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit
