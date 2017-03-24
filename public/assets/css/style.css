@@ -64,8 +64,8 @@ body {
     font-family: 'Cherry Cream Soda', cursive;
 
     margin-bottom: 25px;
-    padding-bottom: 5px;
-    margin-top: 100px;
+    padding-bottom: 10px;
+    margin-top: 40px;
 }
 
 #subtitle {
@@ -74,7 +74,7 @@ body {
 }
 
 .modifiedContainer {
-    max-height: 600px;
+    max-height: 700px;
 }
 
 /* -----------------------------------------Search Page Only------------------------------------*/
