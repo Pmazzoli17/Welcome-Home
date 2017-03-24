@@ -38,8 +38,45 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/neighborhoodPage.html"));
   });
 
-    app.get("/resultsPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/resultsPage.html"));
+
+//results pages that redirects users to the search page they chose and loads results of query
+
+    app.get("/breweries", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/breweryResults.html"));
+  });
+
+    app.get("/events", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/eventsResults.html"));
+  });
+
+
+    app.get("/grocery", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/groceryResults.html"));
+  });
+
+
+    app.get("/gyms", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/gymResults.html"));
+  });
+
+
+    app.get("/restaurants", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/restaurantsResults.html"));
+  });
+
+
+    app.get("/parks", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/parksResults.html"));
+  });
+
+
+    app.get("/shopping", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/shoppingResults.html"));
+  });
+
+
+    app.get("/schools", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/schoolResults.html"));
   });
 
 };
