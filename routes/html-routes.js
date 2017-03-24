@@ -31,14 +31,16 @@ module.exports = function(app) {
   // authors route loads author-manager.html(breweryPage.html)
 
   app.get("/teamPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/teamPage.html"));
-
-  app.get("/breweryPage", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/breweryPage.html"));
-  });
+    res.sendFile(path.join(__dirname, "../public/teamPage.html"));
+  });  
 
   app.get("/neighborhoodPage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/neighborhoodPage.html"));
+
+  });
+
+    app.get("/resultsPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/resultsPage.html"));
 
   });
 
