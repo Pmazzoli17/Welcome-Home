@@ -3,9 +3,11 @@ $(document).ready(function() {
   // blogContainer holds all of our posts
   var blogContainer = $(".blog-container");
   var postInputSelect = $("#input");
+
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handlePostDelete);
   $(document).on("click", "button.edit", handlePostEdit);
+  $(document).on("click", "button.email", handlePostEmail);
   postInputSelect.on("change", handleInputChange);
   var posts;
 
@@ -63,6 +65,12 @@ $(document).ready(function() {
     var editBtn = $("<button>");
     editBtn.text("EDIT");
     editBtn.addClass("edit btn btn-default");
+
+    var emailBtn = $("<button>");
+    emailBtn.text("Click to Contact");
+    // emailBtn.addClass("email btn btn-default");
+    emailBtn.addClass("email btn btn pull-right");
+
     var newPostname = $("<h2>");
     var newPostDate = $("<small>");
     var newPostInput = $("<h5>");
@@ -83,10 +91,15 @@ $(document).ready(function() {
     newPostDate.text(formattedDate);
     newPostname.append(newPostDate);
     newPostPanelHeading.append(deleteBtn);
+
     newPostPanelHeading.append(editBtn);
+    newPostPanelHeading.append(emailBtn);
+
     newPostPanelHeading.append(newPostname);
     newPostPanelHeading.append(newPostInput);
+
     newPostPanelBody.append(newPostBody);
+
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
     newPostPanel.data("post", post);
@@ -110,16 +123,26 @@ $(document).ready(function() {
       .parent()
       .parent()
       .data("post");
-    // window.location.href = "/cms?post_id=" + currentPost.id;
+
     window.location.href = "/mainPage?post_id=" + currentPost.id;
   }
 
-  // This function displays a messgae when there are no posts
+  // This function figures out which user we want to Email and takes them to their email, 
+  // with that users info already filled out.
+  function handlePostEmail() {
+    var currentPost = $(this)
+      .parent()
+      .parent()
+      .data("post");
+    window.location.href = "mailto:" + currentPost.email;
+  }
+
+  // This function displays a message when there are no posts
   function displayEmpty() {
     blogContainer.empty();
     // var messageh2 = $("<h2>");
     // messageh2.css({ "text-align": "center", "margin-top": "50px" });
-    // messageh2.html("No posts yet for this category, navigate <a href='/cms'>here</a> in order to create a new post.");
+    // messageh2.html("No posts yet for this category, navigate <a href='/mainPage'>here</a> in order to create a new post.");
     // blogContainer.append(messageh2);
   }
 

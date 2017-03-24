@@ -12,17 +12,19 @@ $(document).ready(function() {
     getPostData(postId);
   }
 
-  // Getting jQuery references to the post name, address, email-address, zip-code and mainPageform
+  // Getting jQuery references to the post name, address, city, state,
+  // zip-code, email-address, where did you move from?, photo and mainPageform
   // var bodyInput = $("#body");
   var nameInput = $("#name");
   var addressInput = $("#address");
-  var emailInput = $("#email-address");
+  var cityInput = $("#city");
+  var stateInput = $("#state");
   var zipInput = $("#zip-code");
+  var emailInput = $("#email-address");
+  var moveFromInput = $("#moveFrom");
   var photoInput = $("#photo");
   var mainPageForm = $("#mainPage");
-  // var postCategorySelect = $("#category");
-  // // Giving the postCategorySelect a default value
-  // postCategorySelect.val("Personal");
+  
   // // Adding an event listener for when the form is submitted
   $(mainPageForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
@@ -34,10 +36,12 @@ $(document).ready(function() {
     var newPost = {
       name: nameInput.val().trim(),
       address: addressInput.val().trim(),
-      email: emailInput.val().trim(),
+      city: cityInput.val().trim(),
+      state: stateInput.val().trim(),
       zip: zipInput.val().trim(),
+      email: emailInput.val().trim(),
+      moveFrom: moveFromInput.val().trim(),
       photo: photoInput.val().trim()
-      // body: bodyInput.val().trim()
     };
 
     console.log(newPost)
@@ -53,11 +57,10 @@ $(document).ready(function() {
     }
   });
 
-  // Submits a new post and brings user to searchPage (neighborhood) page upon completion
+  // Submits a new post and brings user to searchPage upon completion
   function submitPost(Post) {
     $.post("/api/posts/", Post, function() {
     	window.location.href = "/searchPage";
-      // window.location.href = "/neighborhood";
     });
   }
 
@@ -68,10 +71,12 @@ $(document).ready(function() {
         // If this post exists, prefill our mainPage forms with its data
         nameInput.val(data.name);
         addressInput.val(data.address);
-        emailInput.val(data.email);
+        cityInput.val(data.city);
+        stateInput.val(state.name);
         zipInput.val(data.zip);
+        emailInput.val(data.email);
+        moveFromInput.val(data.moveFrom);
         photoInput.val(data.photo);
-        // bodyInput.val(data.body);
         
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit
@@ -80,7 +85,7 @@ $(document).ready(function() {
     });
   }
 
-  // Update a given post, bring user to the neighborhood page when done
+  // Update a given post, bring user to the searchPage when done
   function updatePost(post) {
     $.ajax({
       method: "PUT",
@@ -89,7 +94,6 @@ $(document).ready(function() {
     })
     .done(function() {
     	window.location.href = "/searchPage";
-      // window.location.href = "/neighborhood";
     });
   }
 });

@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "sstevens",
-    "password": "Larryland102!",
+    "username": "root",
+    "password": "",
     "database": "blogger4",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
-    "username": "sstevens",
-    "password": "Larryland102!",
+    "username": "root",
+    "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "sstevens",
-    "password": "Larryland102!",
+    "username": "root",
+    "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
