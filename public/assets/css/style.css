@@ -158,6 +158,8 @@ body {
 
 /* ----------------------- OUR TEAM PAGE -----------------------  */
 
+
+
 #ourteam {
     font-family: 'Cherry Cream Soda', cursive;
 }
@@ -174,18 +176,14 @@ body {
 /* ----------------------- NEIGHBORHOOD PAGE ----------------------- */
 
 #neighborPost {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Cherry Cream Soda', cursive;
+    /*font-family: 'Montserrat', sans-serif;*/
     width: 950px ;
     margin-left: auto ;
     margin-right: auto ;
 }
 
-#blogContainer h2 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-#blogContainer h4 {
-    font-family: 'Cherry Cream Soda', cursive;
+#blogPost h4 {
     color: #A9A9A9;
 }
 
