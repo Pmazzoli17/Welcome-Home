@@ -171,6 +171,24 @@ body {
     display: none;
 }
 
+/* ----------------------- NEIGHBORHOOD PAGE ----------------------- */
+
+#neighborPost {
+    font-family: 'Montserrat', sans-serif;
+    width: 950px ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+#blogContainer h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#blogContainer h4 {
+    font-family: 'Cherry Cream Soda', cursive;
+    color: #A9A9A9;
+}
+
 
 /* ---------------------RESULTS TABLE----------------------------- */
 
