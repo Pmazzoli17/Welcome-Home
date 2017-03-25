@@ -55,15 +55,13 @@ $(document).ready(function() {
 
   // This function constructs a post's HTML
   function createNewRow(post) {
-    var newPostPanel = $("<div>");
-    newPostPanel.addClass("panel panel-default");
-    var newPostPanelHeading = $("<div>");
-    newPostPanelHeading.addClass("panel-heading");
+    var newPostPanel = $("<div class = 'panel panel-default'>");
+    var newPostPanelHeading = $("<div class ='panel-heading'>");
     var deleteBtn = $("<button>");
-    deleteBtn.text("x");
+    deleteBtn.text("Delete Me");
     deleteBtn.addClass("delete btn btn-danger");
     var editBtn = $("<button>");
-    editBtn.text("EDIT");
+    editBtn.text("Edit Profile");
     editBtn.addClass("edit btn btn-default");
 
     var emailBtn = $("<button>");
@@ -71,9 +69,11 @@ $(document).ready(function() {
     // emailBtn.addClass("email btn btn-default");
     emailBtn.addClass("email btn btn pull-right");
 
-    var newPostname = $("<h2>");
-    var newPostDate = $("<h4>");
-    var newPostInput = $("<h5>");
+    var newPostname = $("<h2 class 'postInfo'>");
+        var newPostCity = $("<span class = 'userData city postInfo'>");
+    var newPostState = $("<span class = 'userData state postInfo'>");
+    var newPostDate = $("<h4 class = 'postInfo'>");
+    var newPostInput = $("<h5 class = 'postInfo'>");
     newPostInput.text(post.input);
     newPostInput.css({
       float: "right",
@@ -85,8 +85,7 @@ $(document).ready(function() {
     newPostPanelBody.addClass("panel-body");
 
     // var newPostBody = $("<p>");
-    var newPostCity = $("<p>");
-    var newPostState = $("<p>");
+
 
     newPostname.text(post.name + " ");
 
@@ -95,8 +94,8 @@ $(document).ready(function() {
     newPostState.text(post.state);
 
     var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-    newPostDate.text(formattedDate);
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY");
+    newPostDate.text("Profile Creation Date: " +   formattedDate);
     
     newPostname.append(newPostDate);
     newPostPanelHeading.append(deleteBtn);
@@ -105,11 +104,11 @@ $(document).ready(function() {
     newPostPanelHeading.append(emailBtn);
 
     newPostPanelHeading.append(newPostname);
+    newPostPanelHeading.append(newPostCity);
+    newPostPanelHeading.append(newPostState);
     newPostPanelHeading.append(newPostInput);
 
-    // newPostPanelBody.append(newPostBody);
-    newPostPanelBody.append(newPostCity);
-    newPostPanelBody.append(newPostState);
+
 
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);

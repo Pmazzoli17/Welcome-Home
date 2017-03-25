@@ -20,7 +20,6 @@ body {
 	outline-style: dashed;
 }
 
-	
 
 
 #title{
@@ -46,7 +45,7 @@ body {
 /* --------------------------Main Page Only------------------------------------*/
 
 .entry-box {
-    background-color: grey;
+    background-color: #d5d9e0;
 
 }
 
@@ -190,6 +189,16 @@ body {
 #myInput {
     color: grey;
 }
+
+.userData {
+    display: inline-block;
+
+}
+
+.userData + .userData {
+    margin-left: 5px;
+}
+
 
 /* ---------------------RESULTS TABLE----------------------------- */
 

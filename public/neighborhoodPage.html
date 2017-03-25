@@ -37,7 +37,7 @@
         <h1>Welcome Home</h1>
           <p id="subtitle">Here are some other people who are new in town.</p>
 
-          <input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Search for Neighbors">
+          <input type="text" id="myInput" onkeyup="filterCity(this)" placeholder=" Search for Neighbors">
       </div>
     </div>
 
@@ -99,20 +99,19 @@
 <script>
 
 console.log("working?");
-function myFunction() {
+function filterCity(input) {
     // Declare variables
-    var input, filter, div;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    div = document.getElementById("neighborPost");
+    var filter = input.value.toUpperCase();
+    var cities = document.getElementsByClassName("city");
 
     // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < div.length; i++) {
-        div = div[i].getElementsById("neighborPost")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            div[i].style.display = "";
+    for (i = 0; i < cities.length; i++) {
+       var city = cities[i];
+       var $row = $(city).closest(".panel");
+        if (city.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            $row.show();
         } else {
-            div[i].style.display = "none";
+            $row.hide();
         }
     }
 }
