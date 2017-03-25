@@ -83,9 +83,17 @@ $(document).ready(function() {
     });
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
-    var newPostBody = $("<p>");
+
+    // var newPostBody = $("<p>");
+    var newPostCity = $("<p>");
+    var newPostState = $("<p>");
+
     newPostname.text(post.name + " ");
-    newPostBody.text(post.body);
+
+    // newPostBody.text(post.body);
+    newPostCity.text(post.city);
+    newPostState.text(post.state);
+
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
@@ -99,7 +107,9 @@ $(document).ready(function() {
     newPostPanelHeading.append(newPostname);
     newPostPanelHeading.append(newPostInput);
 
-    newPostPanelBody.append(newPostBody);
+    // newPostPanelBody.append(newPostBody);
+    newPostPanelBody.append(newPostCity);
+    newPostPanelBody.append(newPostState);
 
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);

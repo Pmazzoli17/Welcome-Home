@@ -47,7 +47,7 @@ module.exports = function(app) {
       zip: req.body.zip,
       email: req.body.email,
       moveFrom: req.body.moveFrom,
-      photo: req.body.photo
+      // photo: req.body.photo
     })
     // then return the result using res.json
     .then(function(dbPost) {
