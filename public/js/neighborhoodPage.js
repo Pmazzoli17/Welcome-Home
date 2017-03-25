@@ -72,7 +72,7 @@ $(document).ready(function() {
     emailBtn.addClass("email btn btn pull-right");
 
     var newPostname = $("<h2>");
-    var newPostDate = $("<small>");
+    var newPostDate = $("<h4>");
     var newPostInput = $("<h5>");
     newPostInput.text(post.input);
     newPostInput.css({
@@ -89,6 +89,7 @@ $(document).ready(function() {
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
+    
     newPostname.append(newPostDate);
     newPostPanelHeading.append(deleteBtn);
 
