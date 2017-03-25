@@ -22,7 +22,7 @@ $(document).ready(function() {
   var zipInput = $("#zip-code");
   var emailInput = $("#email-address");
   var moveFromInput = $("#moveFrom");
-  var photoInput = $("#photo");
+  // var photoInput = $("#photo");
   var mainPageForm = $("#mainPage");
   
   // // Adding an event listener for when the form is submitted
@@ -41,7 +41,7 @@ $(document).ready(function() {
       zip: zipInput.val().trim(),
       email: emailInput.val().trim(),
       moveFrom: moveFromInput.val().trim(),
-      photo: photoInput.val().trim()
+      // photo: photoInput.val().trim()
     };
 
     console.log(newPost)
@@ -76,7 +76,7 @@ $(document).ready(function() {
         zipInput.val(data.zip);
         emailInput.val(data.email);
         moveFromInput.val(data.moveFrom);
-        photoInput.val(data.photo);
+        // photoInput.val(data.photo);
         
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit
