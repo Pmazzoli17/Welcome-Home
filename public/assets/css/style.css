@@ -76,6 +76,9 @@ body {
     max-height: 700px;
 }
 
+.zip {
+    background-color: white;
+}
 /* -----------------------------------------Search Page Only------------------------------------*/
 
 .search-icon {
