@@ -48,7 +48,7 @@ module.exports = function(app) {
     app.get("/events", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/eventsResults.html"));
   });
-
+// I added a line and then erased it - ML
 
     app.get("/grocery", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/groceryResults.html"));
