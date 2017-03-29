@@ -89,8 +89,78 @@
 		<!--Modal-->
 
 <!-- Custom Script -->
-	<script src="js/mainPage.js" type="text/javascript"></script>
+<!--	<script src="js/mainPage.js" type="text/javascript"></script>
 	<script src="js/eventHandler.js" type="text/javascript"></script>
+-->
+<script>
+
+//////////////////////////////////////////////////////////////////
+//   Block comment for Document ready function                  //
+//   1. Retrieve user's zip from storage                        //
+//   2. Update query string with user's zip                     //
+//   3. Make ajax call with updated query string                //
+//   4. Retrieve City, Event Name, Start Time and Address       //
+//   5. Modify eventResults Div with event information          //
+//////////////////////////////////////////////////////////////////
+
+
+// Start the script when the document loads
+$( document ).ready(function() {
+    console.log( "ready!" );
+// Initialize zip code variable for query string
+    var zipForQuery="";  
+
+// Retrieve saved zipcode from local storage      
+    zipForQuery=localStorage.getItem("zipCodePass");
+
+// Debug statement to make sure zip was received    
+//   console.log("zipCodePass = : " + zipForQuery);
+
+ 
+// Query string for API call 
+ 	queryURL1 = "http://api.eventful.com/json/events/search?app_key=C4twR9SMnMSRvt9T&location="+ zipForQuery + "&country_name=united+states&within=5&date=Next+week";
+ 
+// Make AJAX call 
+
+ 	$.ajax({
+	      url: queryURL1,
+	      method: 'GET',
+	      dataType: 'jsonp'
+
+	      }).done(function(response, err) {
+	      	// if (err){
+	      	// 	console.log(err);
+	      	// 	throw err;
+
+	      	// }
+
+	      		// This for loop will proccess at max 10 event results from the query
+		        for (i=0; i<10; i++){
+
+		            var cityName= response.events.event[i].city_name;
+		              		             
+		            var eventName= response.events.event[i].title;
+		            		              
+		            var d=response.events.event[i].start_time;
+		              
+		            var address=response.events.event[i].venue_address;
+		             		              
+		            //  Debug statement - console.log(cityName);
+		            $('#eventResults').append("<br><br>Event:" + eventName + "- will be in " + cityName + " <br> Date: " + d + "<br> Location " + address);
+		              
+		          }  // end of for LOOP
+		          
+
+	}); // end of .done
+
+}); // end of document ready
+
+
+</script>
+
+
+
+
 </body>
 </html>
 
