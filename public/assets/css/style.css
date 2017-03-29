@@ -31,7 +31,7 @@ body {
 .container {
         background-image: url('../images/welcomeDoor1.jpg');
         width: 100%;
-        height: 1200px;
+        height: 1600px;
 }
 
 #footer {
@@ -85,7 +85,7 @@ body {
 }
 
 #mainContainer {
-    height: 950px;
+    height: 1050px;
 }
 
 #zipCode {
@@ -206,7 +206,7 @@ body {
     display: none;
 }
 
-.teamContainer {
+#teamContainer {
     height: 700px;
 }
 /* ----------------------- NEIGHBORHOOD PAGE ----------------------- */

@@ -144,9 +144,21 @@ $( document ).ready(function() {
 		            var d=response.events.event[i].start_time;
 		              
 		            var address=response.events.event[i].venue_address;
+
+		            	              //formatting date to strip off extra GMT time
+				  var myDate = new Date(d);
+				  var date = new Date(myDate);
+				  myDate = new Date(myDate).toUTCString();
+				  myDate = myDate.split(' ').slice(0,4).join(' ');
+
+				  //added time to new field
+				  var time = d;
+				  time = d.split(' ').slice(1,2).join(' ');
+
+
 		             		              
 		            //  Debug statement - console.log(cityName);
-		            $('#eventResults').append("<br><br>Event:" + eventName + "- will be in " + cityName + " <br> Date: " + d + "<br> Location " + address);
+	$('#eventResults').append("<br><br><b>Event:</b> " + eventName + " - will be in <b>" + cityName + "</b><br> <b>Date: </b>" + myDate + "&nbsp&nbsp&nbsp&nbsp <b>Time: </b>" + time + "<br> <b>Location: </b>" + address);
 		              
 		          }  // end of for LOOP
 		          
