@@ -1,4 +1,4 @@
-CREATE DATABASE blogger4;
+CREATE DATABASE passport_demo;
 
-USE blogger4;
+USE passport_demo;
 
