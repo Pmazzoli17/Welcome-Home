@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   // index route loads mainPage.html)
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/mainPage.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
   // searchPage route loads searchPage.html

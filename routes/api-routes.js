@@ -46,7 +46,8 @@ module.exports = function(app) {
       state: req.body.state,
       zip: req.body.zip,
       email: req.body.email,
-      moveFrom: req.body.moveFrom,
+      password: req.body.password,
+      moveFrom: req.body.moveFrom
       // photo: req.body.photo
     })
     // then return the result using res.json
