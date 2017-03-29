@@ -4,9 +4,8 @@
     "password": "Larryland102!",
     "database": "blogger4",
     "host": "localhost",
-    "port": "3306",
-    "dialect": "mysql"
-    
+    "dialect": "mysql",
+    "port": 8889
   },
   "test": {
     "username": "root",

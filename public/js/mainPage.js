@@ -21,6 +21,7 @@ $(document).ready(function() {
   var stateInput = $("#state");
   var zipInput = $("#zip-code");
   var emailInput = $("#email-address");
+  var passInput = $("#passwordText");
   var moveFromInput = $("#moveFrom");
   // var photoInput = $("#photo");
   var mainPageForm = $("#mainPage");
@@ -40,6 +41,7 @@ $(document).ready(function() {
       state: stateInput.val().trim(),
       zip: zipInput.val().trim(),
       email: emailInput.val().trim(),
+      password: passInput.val().trim(),
       moveFrom: moveFromInput.val().trim(),
       // photo: photoInput.val().trim()
     };
@@ -75,6 +77,7 @@ $(document).ready(function() {
         stateInput.val(state.name);
         zipInput.val(data.zip);
         emailInput.val(data.email);
+        passInput.val(data.password);
         moveFromInput.val(data.moveFrom);
         // photoInput.val(data.photo);
         
