@@ -6,15 +6,35 @@
 // =============================================================
 var path = require("path");
 
-// Routes
-// =============================================================
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 module.exports = function(app) {
 
-  // Each of the below routes just handles the HTML page that the user gets sent to.
-
-  // index route loads mainPage.html)
   app.get("/", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/members");
+      // res.redirect("/mainPage");
+    }
+    res.sendFile(path.join(__dirname + "/../public/signup.html"));
+    // res.sendFile(path.join(__dirname, "../public/mainPage.html"));
+  });
+
+  app.get("/login", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      // res.redirect("/members");
+      res.redirect("/mainPage");
+    }
+    // res.sendFile(path.join(__dirname + "/../public/login.html"));
     res.sendFile(path.join(__dirname, "../public/mainPage.html"));
+  });
+
+  // Here we've add our isAuthenticated middleware to this route.
+  // If a user who is not logged in tries to access this route they will be redirected to the signup page
+  app.get("/members", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname + "/../public/members.html"));
   });
 
   // searchPage route loads searchPage.html
@@ -39,8 +59,23 @@ module.exports = function(app) {
   });
 
 
-//results pages that redirects users to the search page they chose and loads results of query
+  // mainPage route loads mainPage.html
+  app.get("/mainPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/mainPage.html"));
+  });
 
+  // teamPage route loads teamPage.html)
+  app.get("/teamPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/teamPage.html"));
+  });  
+
+
+  // neighborhoodPage route loads neighborhoodPage.html)
+  app.get("/neighborhoodPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/neighborhoodPage.html"));
+  });
+
+  //results pages that redirects users to the search page they chose and loads results of query
     app.get("/breweries", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/breweryResults.html"));
   });
@@ -49,7 +84,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/eventsResults.html"));
   });
 // I added a line and then erased it - ML
-
     app.get("/grocery", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/groceryResults.html"));
   });
@@ -78,5 +112,5 @@ module.exports = function(app) {
     app.get("/schools", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/schoolResults.html"));
   });
-
 };
+
