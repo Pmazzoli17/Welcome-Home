@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Welcome Home</title>
+  <!-- <title>Passport Authentication</title> -->
+  <title>Welcome Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head> -->
 
 <!--Link Bootstrap's JavaScript to jQuery-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -25,83 +32,34 @@
 
 <body>
 
-<div class="container">	
+<div class="container" id = "mainContainer">  
 
-	<div class="jumbotron" id = "title">
-		  <div class=".container">
-			  <h1>Welcome Home</h1>
-			  	<p id="subtitle">Moving somewhere new can be stressful. We are here to help! We are a one stop site to locate all local businesses, sites and events. In addition, you can connect with others in your neighborhood. You will feel at home in no time!</p>
-		  </div>
-	</div>
+    <!--Title-->
+    
+    <div class="jumbotron" id = "title">
+      <div class=".container">
+        <h1>Welcome Home</h1>
+          <p id="subtitle" align="center">Moving somewhere new can be stressful. We are help to help! We are a one stop site to locate all local businesses, sites and events. In addition, you can connect with others in your neighborhood. You will feel at home in no time!</p>
+      </div>
+    </div>
 
-	<div class="row" id="loginRow">
- 		<div class="col-sm-6">
-			<div class="panel panel-default" id="loginForm">
-		 			<div class="panel-heading" id="loginTitle"><strong>RETURNING USERS:</strong>
-					</div>
-
- 			<div class="panel-body">
- 			
-				<!-- <form> -->
-				<form class="login" id="loginPage">				  
-				  <div class="form-group">
-				    <label for="InputEmail">Email address:</label>
-				    <input type="email" class="form-control entry-box" id="emailText" aria-describedby="emailHelp" placeholder="Enter email">
-				  </div>
-				  <div class="form-group">
-					<label for="MoveFrom">Password:</label>
-				    <input type="text" class="form-control entry-box" id="passwordText" placeholder="Enter password">
-				  </div>
-
-				  <button type="submit" class="btn btn-success submit">Submit</button>
-				</form>  
-
-				</div>  
-		
-			</div>	
-		</div>
-
-		<div class="panel panel-default" id="newuserForm">
-		 			<div class="panel-heading" id="newuserTitle"><strong>NEW USERS:</strong>
-					</div>
-
- 			<div class="panel-body">
- 			<p align="center"><strong>We just need to gather some information from you in order to get searches that are relevant to your new area.</strong></p>
-
-				<div class="col-sm-6" align="center">
-					<a href="/mainPage" class="btn btn-success btn-lg" id="newuserClick">Click here to create a new user profile</a>
-				</div>
-			</div>
-		</div>	
-	</div>
-		
-</div>
-
-<script type="text/javascript" src="js/login.js"></script>
-
-</body>
-
-<html lang="en">
-
-<head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
-</head>
-
-<body>
-  <nav class="navbar navbar-default">
+  <!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
       </div>
     </div>
-  </nav>
-  <div class="container">
+  </nav> -->
+
+  <!-- <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
+        <h2>Login Form</h2> -->
+
+  <div class="main-section panel">
+    <div id = "input-form">
+      <h3 id="tableTitle" align="center">Returning Users</h3>
+
+        <!-- <h2>RETURNING USERS:</h2> -->
         <form class="login">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -118,6 +76,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
