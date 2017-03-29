@@ -28,7 +28,7 @@ $.ajax({
 	              //var imgURL=results.events.event[0].image.thumb.url;
 	              
 	              console.log(cityName);
-	              $('#eventResults').append("<br><br>Event:" + eventName + "- will be in " + cityName + " <br> Date: " + d + "<br> Location " + address);
+	              $('#eventResults').append("<br><br>Event: " + eventName + "- will be in " + cityName + "<br> Date: " + d + "<br> Location: " + address);
 	                  
 	          }  // end of for LOOP
 
