@@ -1,8 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "blogger4",
+
+    "password": "",
+    "database": "passport_demo",
+
     "host": "localhost",
     "dialect": "mysql",
     "port": 8889
@@ -22,4 +24,3 @@
     "dialect": "mysql"
   }
 }
-
