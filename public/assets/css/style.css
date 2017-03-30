@@ -168,7 +168,7 @@ body {
     font-size: 12px;
 }
 #loc-code {
-    width: 65px;
+    width: 70px;
 
 }
 
@@ -257,11 +257,10 @@ body {
 /*-----------------------SCHOOL PAGE----------------------------*/
 
 .school-section{
-    /*height: 5000px;*/
-    height: 2900px;
+    height: 3000px;
 }
 
 .school-panel{
-    /*height:4700px;*/
-    height:2490px;
+    height:3000px;
 }
+
