@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": "Gods1man",
-    "database": "blogger4",
+    "username": "sstevens",
+    "password": "Larryland102!",
+    "database": "passport_demo",
     "host": "localhost",
     "dialect": "mysql"
   },

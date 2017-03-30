@@ -7,7 +7,7 @@ Users can access the site by going to http://www.example.com.
 ## Landing Page
 Once on the landing page, new users will need to create a username and password, or returning users can click on the "log In" link.
 
-![Landing Page](./public/assets/images/signUpPage2.jpg)
+![Landing Page](./public/assets/images/signUpPage.jpg)
 
 
 ## Main Form Page
