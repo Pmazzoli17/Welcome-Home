@@ -167,7 +167,7 @@ body {
 .form-group {
     font-size: 12px;
 }
-#zip-code {
+#loc-code {
     width: 65px;
 
 }
@@ -252,4 +252,14 @@ body {
 
 #eventResults {
     margin-left: 20px;
+}
+
+/*-----------------------SCHOOL PAGE----------------------------*/
+
+.school-section{
+    height: 5000px;
+}
+
+.school-panel{
+    height:4700px;
 }

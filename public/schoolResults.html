@@ -26,7 +26,7 @@
 <!--Main Page-->	
 <body>
 
-	<div class="container modifiedContainer">	
+	<div class="container modifiedContainer school-section">	
 
 		<!--Title-->
 		
@@ -38,11 +38,11 @@
 		</div>
 	
 		<!--Main-->		
-		<div class="main-section panel">
+		<div class="main-section panel school-panel">
 		<div id = "input-form">
 			<h3 id="resultsTable" align="center">You are one step closer to feeling at home...</h3>
 
-			<div id = "">
+			<div id = "schoolResults">
 				
 				
 			</div>
@@ -126,31 +126,36 @@
 	     }
 	      
 	    }).done(function(response, err) {
+
+
 	      if (err !="success"){
 	         	console.log("error");
 	        	console.log(err);
 	       }
-	      console.log(response.body);
+	      console.log(response.data);
 
 	      console.log("Positive response :" + err);
 	      console.log("this is response" + response);
 
 	      $(response).find("school").each(function(i,school){
 	  			var thisSchool = $("<ul>");
-	  			console.log("step 100");
+	  			//console.log("step 100");
 	  			console.log(thisSchool);
-	  			console.log("step 101");
+	  			//console.log("step 101");
+
 
 	  			$("> *",school).each(function(n,property){
 	    			var thisProperty = $("<li>").appendTo(thisSchool);
 	    			$(thisProperty).append("<b>" + property.tagName + ":</b> "); // property name
 	    			$(thisProperty).append($(property).text()); // property text
+
 	  			})
-	  			$("#resultsTable").append(thisSchool);
-	  			$("#resultsTable").append("<hr><h3>New School</h3>")        
+
+
+	  			$("#schoolResults").append(thisSchool);
+	  			$("#schoolResults").append("<hr><h3>-----------------------------------------</h3>")        
 			})
 	      //$("#resultsTable").append("<h1>"+ response + "</h1>");
-	      
 	    });  // end of .DONE function
 
 	 });
