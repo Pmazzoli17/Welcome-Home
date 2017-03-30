@@ -109,22 +109,22 @@
 //   5. Modify eventResults Div with event information          //
 //////////////////////////////////////////////////////////////////
 
-
+// ML made modifications for location on 03-30-17
 // Start the script when the document loads
 $( document ).ready(function() {
     console.log( "ready!" );
-// Initialize zip code variable for query string
-    var zipForQuery="";  
+// Initialize loc code variable for query string
+    var locForQuery="";  
 
-// Retrieve saved zipcode from local storage      
-    zipForQuery=localStorage.getItem("zipCodePass");
+// Retrieve saved loc code from local storage      
+    locForQuery=localStorage.getItem("locationPass");
 
-// Debug statement to make sure zip was received    
-//   console.log("zipCodePass = : " + zipForQuery);
+
+
 
  
 // Query string for API call 
- 	queryURL1 = "http://api.eventful.com/json/events/search?app_key=C4twR9SMnMSRvt9T&location="+ zipForQuery + "&country_name=united+states&within=5&date=Next+week";
+ 	queryURL1 = "http://api.eventful.com/json/events/search?app_key=C4twR9SMnMSRvt9T&location="+ locForQuery + "&country_name=united+states&within=5&date=Next+week";
  
 // Make AJAX call 
 
