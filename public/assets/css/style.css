@@ -257,10 +257,13 @@ body {
 /*-----------------------SCHOOL PAGE----------------------------*/
 
 .school-section{
-    height: 3000px;
+    /*height: 3000px;*/
+    height: 2900px;
+}
 }
 
 .school-panel{
-    height:3000px;
+    /*height:3000px;*/
+    height:2490px;
 }
 
