@@ -91,5 +91,72 @@
 <!-- Custom Script -->
 	<script src="js/mainPage.js" type="text/javascript"></script>
 
+	<script>
+//////////////////////////////////////////////////////////////////
+//   Block comment for Document ready function                  //
+//   1. Retrieve user's location from storage                   //
+//   2. Update query string with user's loc                     //
+//   3. Make ajax call with updated query string                //
+//   4. Retrieve school information                             //
+//   5. Modify resultsTable Div with school information         //
+//////////////////////////////////////////////////////////////////
+// Start the script when the document loads
+	$( document ).ready(function() {
+	    console.log( "ready!" );
+	// Initialize zip code variable for query string
+
+
+	var schoolLocForQuery="";
+	schoolLocForQuery=localStorage.getItem("locationPass");
+	console.log("schoolLocForQuery  :" + schoolLocForQuery);
+	var q1=schoolLocForQuery
+	var q2="https://utcors1.herokuapp.com/http://api.greatschools.org/search/schools?key=v8tlllkxapvtodjexkssagxx&state=nc&q=" + q1;
+	console.log("q2 :" + q2);
+
+	var schoolsQueryURL=q2;
+
+	//var schoolsQueryURL="https://utcors1.herokuapp.com/http://api.greatschools.org/search/schools?key=v8tlllkxapvtodjexkssagxx&state=NC&q=raleigh";
+
+	    $.ajax({
+	      url: schoolsQueryURL,
+	      method: "GET",
+	      //dataType : "jsonp",
+	      headers: {
+	             "x-requested-with":" "
+	     }
+	      
+	    }).done(function(response, err) {
+	      if (err !="success"){
+	         	console.log("error");
+	        	console.log(err);
+	       }
+	      console.log(response.body);
+
+	      console.log("Positive response :" + err);
+	      console.log("this is response" + response);
+
+	      $(response).find("school").each(function(i,school){
+	  			var thisSchool = $("<ul>");
+	  			console.log("step 100");
+	  			console.log(thisSchool);
+	  			console.log("step 101");
+
+	  			$("> *",school).each(function(n,property){
+	    			var thisProperty = $("<li>").appendTo(thisSchool);
+	    			$(thisProperty).append("<b>" + property.tagName + ":</b> "); // property name
+	    			$(thisProperty).append($(property).text()); // property text
+	  			})
+	  			$("#resultsTable").append(thisSchool);
+	  			$("#resultsTable").append("<hr><h3>New School</h3>")        
+			})
+	      //$("#resultsTable").append("<h1>"+ response + "</h1>");
+	      
+	    });  // end of .DONE function
+
+	 });
+	    </script>
+
+
+
 </body>
 </html>
