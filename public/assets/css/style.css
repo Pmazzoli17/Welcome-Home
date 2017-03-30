@@ -257,9 +257,11 @@ body {
 /*-----------------------SCHOOL PAGE----------------------------*/
 
 .school-section{
-    height: 5000px;
+    /*height: 5000px;*/
+    height: 2900px;
 }
 
 .school-panel{
-    height:4700px;
+    /*height:4700px;*/
+    height:2490px;
 }
