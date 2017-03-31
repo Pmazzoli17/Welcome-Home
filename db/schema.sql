@@ -1,4 +1,4 @@
-CREATE DATABASE passport_demo;
+CREATE DATABASE welcome_home;
 
-USE passport_demo;
+USE welcome_home;
 
