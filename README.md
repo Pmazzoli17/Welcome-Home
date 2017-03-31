@@ -2,7 +2,7 @@
 
 The site for users to find local resources and other newcomers in one place!
 
-Users can access the site by going to http://www.example.com. 
+Users can access the site by going to https://aqueous-mountain-45991.herokuapp.com/
 
 ## Landing Page
 Once on the landing page, new users will need to create a username and password, or returning users can click on the "log In" link.
