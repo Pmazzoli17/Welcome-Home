@@ -1,4 +1,4 @@
-CREATE DATABASE blogger4;
+CREATE DATABASE welcome_home;
 
-USE blogger4;
+USE welcome_home;
 

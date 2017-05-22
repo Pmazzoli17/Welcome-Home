@@ -26,7 +26,7 @@
 <!--Main Page-->	
 <body>
 
-	<div class="container modifiedContainer">	
+	<div class="container modifiedContainer school-section">	
 
 		<!--Title-->
 		
@@ -38,11 +38,19 @@
 		</div>
 	
 		<!--Main-->		
-		<div class="main-section panel">
-		<div id = "input-form">
+		<div class="main-section panel school-panel">
+		<!-- <div id = "input-form"> -->
 			<h3 id="resultsTable" align="center">You are one step closer to feeling at home...</h3>
 
-			<div id = "">
+			<div id = "schoolPics">
+			<img src="https://static1.squarespace.com/static/54caa3dce4b0b2da2a4233fa/t/56cdbc2840261d9c2e3b7d9d/1456324503426/Broughton+High+School" alt="Mountain View" style="width:295px;height:228px;">
+			<img src="https://www.ncat.edu/125/img/Gallery/WileyElementarySchool/Gallery-swesyac1.jpg" style="width:295px;height:228px;">
+			<img src="http://www.coedu.usf.edu/main/departments/ce/elementary_education/bailey.jpg" alt="Mountain View" style="width:295px;height:228px;">
+			<br>
+			<br>
+			</div>
+
+			<div id = "schoolResults">
 				
 				
 			</div>
@@ -90,6 +98,78 @@
 
 <!-- Custom Script -->
 	<script src="js/mainPage.js" type="text/javascript"></script>
+
+	<script>
+//////////////////////////////////////////////////////////////////
+//   Block comment for Document ready function                  //
+//   1. Retrieve user's location from storage                   //
+//   2. Update query string with user's loc                     //
+//   3. Make ajax call with updated query string                //
+//   4. Retrieve school information                             //
+//   5. Modify resultsTable Div with school information         //
+//////////////////////////////////////////////////////////////////
+// Start the script when the document loads
+	$( document ).ready(function() {
+	    console.log( "ready!" );
+	// Initialize zip code variable for query string
+
+
+	var schoolLocForQuery="";
+	schoolLocForQuery=localStorage.getItem("locationPass");
+	console.log("schoolLocForQuery  :" + schoolLocForQuery);
+	var q1=schoolLocForQuery
+	var q2="https://utcors1.herokuapp.com/https://api.greatschools.org/search/schools?key=v8tlllkxapvtodjexkssagxx&state=nc&q=" + q1;
+	console.log("q2 :" + q2);
+
+	var schoolsQueryURL=q2;
+
+	//var schoolsQueryURL="https://utcors1.herokuapp.com/http://api.greatschools.org/search/schools?key=v8tlllkxapvtodjexkssagxx&state=NC&q=raleigh";
+
+	    $.ajax({
+	      url: schoolsQueryURL,
+	      method: "GET",
+	      //dataType : "jsonp",
+	      headers: {
+	             "x-requested-with":" "
+	     }
+	      
+	    }).done(function(response, err) {
+
+
+	      if (err !="success"){
+	         	console.log("error");
+	        	console.log(err);
+	       }
+	      console.log(response.data);
+
+	      console.log("Positive response :" + err);
+	      console.log("this is response" + response);
+
+	      $(response).find("school").each(function(i,school){
+	  			var thisSchool = $("<ul>");
+	  			//console.log("step 100");
+	  			console.log(thisSchool);
+	  			//console.log("step 101");
+
+
+	  			$("> *",school).each(function(n,property){
+	    			var thisProperty = $("<li>").appendTo(thisSchool);
+	    			$(thisProperty).append("<b>" + property.tagName + ":</b> "); // property name
+	    			$(thisProperty).append($(property).text()); // property text
+
+	  			})
+
+
+	  			$("#schoolResults").append(thisSchool);
+	  			$("#schoolResults").append("<hr><h3>-----------------------------------------</h3>")        
+			})
+	      //$("#resultsTable").append("<h1>"+ response + "</h1>");
+	    });  // end of .DONE function
+
+	 });
+	    </script>
+
+
 
 </body>
 </html>

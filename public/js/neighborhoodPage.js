@@ -82,7 +82,7 @@ $(document).ready(function() {
       "-15px"
     });
     var newPostPanelBody = $("<div>");
-    newPostPanelBody.addClass("panel-body");
+    //newPostPanelBody.addClass("panel-body");
 
     // var newPostBody = $("<p>");
 

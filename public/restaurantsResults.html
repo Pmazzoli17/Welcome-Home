@@ -42,7 +42,7 @@
 		<div id = "input-form">
 			<h3 id="resultsTable" align="center">You are one step closer to feeling at home...</h3>
 
-			<div id = "">
+			<div id = "restaurantResults">
 				
 				
 			</div>
@@ -88,7 +88,29 @@
 		<!--Modal-->
 
 <!-- Custom Script -->
-	<script src="js/mainPage.js" type="text/javascript"></script>
+	<script>
+
+	console.log("working?");
+
+			var Yelp = require('yelp-api-v3');
+ 
+			var yelp = new Yelp({
+  				app_id: 'GWX8og3ae-ajUZ8Z1oR-ow',
+  				app_secret: 'kQjFcwSRKAa0eNbOaaMmgSpAZjfbDvTZ2HPAv0aRaexWSYfjZ5PbFDXWxcf1uDKp'
+			});
+
+			// https://github.com/Yelp/yelp-api-v3/blob/master/docs/api-references/businesses-search.md 
+			yelp.search({term: 'food', location: '27103', limit: 10})
+			.then(function (data) {
+			    console.log(data);
+			})
+			.catch(function (err) {
+			    console.error(err);
+			});
+
+	</script>
+
+
 
 </body>
 </html>

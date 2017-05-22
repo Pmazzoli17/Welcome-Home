@@ -33,7 +33,8 @@ body {
 .container {
         background-image: url('../images/welcomeDoor1.jpg');
         width: 100%;
-        height: 1000px;
+
+        height: 1600px;
 }
 
 #footer {
@@ -76,9 +77,12 @@ body {
     max-height: 700px;
 }
 
-.zip {
-    background-color: white;
+
+#mainContainer {
+    height: 1050px;
 }
+
+
 /* -----------------------------------------Search Page Only------------------------------------*/
 
 .search-icon {
@@ -158,6 +162,7 @@ body {
     font-size: 12px;
 }
 
+
 /* ----------------------- OUR TEAM PAGE -----------------------  */
 
 
@@ -174,6 +179,7 @@ body {
 #searchButtons {
     display: none;
 }
+
 
 /* ----------------------- NEIGHBORHOOD PAGE ----------------------- */
 
@@ -202,9 +208,44 @@ body {
     margin-left: 5px;
 }
 
+/* ----------------------- LOGIN PAGE ----------------------- */
+
+
+#loginRow {
+    font-family: 'Cherry Cream Soda', cursive;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 
 /* ---------------------RESULTS TABLE----------------------------- */
 
 #resultsTable {
+
 height: 300px;
 }
+
+}
+
+#eventResults {
+    margin-left: 20px;
+}
+
+/*-----------------------SHOPPING PAGE----------------------------*/
+#shopResults {
+    margin-left: 20px;
+}
+
+/*-----------------------SCHOOL PAGE----------------------------*/
+
+.school-section{
+    /*height: 3000px;*/
+    height: 2900px;
+}
+}
+
+.school-panel{
+    /*height:3000px;*/
+    height:2480px;
+}
+

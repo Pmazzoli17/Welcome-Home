@@ -39,9 +39,16 @@
 		</div>
 		<div id="zip">
 
+<<<<<<< HEAD
 			<div class="form-group zip">
 				    <label for="InputZip">Please enter the zip code for which you would like to search</label>
 				    <input type="text" class="form-control entry-box" id="zip-code" placeholder="12345">
+=======
+			<div class="form-group" align="center">
+					<!-- ML 03-30-17 Changed wording on text message to reflect CITY instead of zip Code-->
+				    <label for="InputZip" id = "zipText">Please enter the zip code for which you would like to search</label>
+				    <input type="text" class="form-control entry-box" id="loc-code" placeholder="12345" align="center">
+>>>>>>> master
 			</div>
 			
 
@@ -166,9 +173,40 @@
 		</div>
 
 		<!--javascript-->
-<!-- I added this line to inlcude event handler - ML 03-26-17-->		
+<!-- I added this line to inlcude event handler - ML 03-26-17-->	
+
+<!--	
 <script src="js/eventHandler.js" type="text/javascript"></script>
-	
+-->	
+<script>
+var lastname = "";
+/////////////////////////////////////////////////////////////////////
+//          Event handler for events button                        //
+//          1. Saves zip entered by user into zip variable         //
+//          2. Stores zip into local storage variable zipCodePass  //
+/////////////////////////////////////////////////////////////////////
+$("#events").click(function(){
+ 
+ // obtain the value of location and store in loc   
+  loc = document.getElementById('loc-code').value;
+ // log the value retrieved from loc-code
+  console.log("retrieved loc as :" + loc);
+ // store the contents of the zip variable to local storage "locationPass"
+  localStorage.setItem("locationPass", loc);
+})
+// ML added event for #school on 3-30-17
+$("#school").click(function(){
+ 
+ // obtain the value of zip-code and store in loc   
+  loc = document.getElementById('loc-code').value;
+ // log the value retrieved from loc-code
+  console.log("retrieved loc as :" + loc);
+ // store the contents of the loc variable to local storage "locationPass"
+  localStorage.setItem("locationPass", loc);
+})
+
+
+</script>	
 
 
 </body>
