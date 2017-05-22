@@ -25,7 +25,7 @@ $.ajax({
 	              //var date=formatDate(d);
 	             /* var date=moment(d).format('LLL');*/
 	              var address=response.events.event[i].venue_address;
-
+	              //var imgURL=results.events.event[0].image.thumb.url;
 	              //formatting date to strip off extra GMT time
 				  var myDate = new Date(d);
 				  var date = new Date(myDate);
@@ -36,28 +36,10 @@ $.ajax({
 				  var time = d;
 				  time = d.split(' ').slice(1,2).join(' ');
 
-function format_time(myDate) {
-  // formats a javascript Date object into a 12h AM/PM time string
-  var hour = myDate.getHours();
-  var minute = myDate.getMinutes();
-  var amPM = (hour > 11) ? "pm" : "am";
-  if(hour > 12) {
-    hour -= 12;
-  } else if(hour == 0) {
-    hour = "12";
-  }
-  if(minute < 10) {
-    minute = "0" + minute;
-  }
-  return hour + ":" + minute + amPM;
-}
-
-console.log(myDate);
-
 
 	$('#eventResults').append("<br><br><b>Event:</b> " + eventName + " - will be in <b>" + cityName + "</b><br> <b>Date: </b>" + myDate + "&nbsp&nbsp&nbsp&nbsp <b>Time: </b>" + time + "<br> <b>Location: </b>" + address);
-	                  
-}  // end of for LOOP
+	                                   
+	          }  // end of for LOOP
 
 
 

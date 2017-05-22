@@ -1,6 +1,8 @@
 /* -------------------------------------FONTS USED-----------------------------------
-font-family: 'Kalam', cursive;
+
 font-family: 'Luckiest Guy', cursive;
+font-family: 'Delius Unicase', cursive;
+font-family: 'Neucha', cursive;
 font-family: 'Cherry Cream Soda', cursive;*/
 /* -------------------------------------All Pages----------------------------------*/
 body {
@@ -31,7 +33,7 @@ body {
 .container {
         background-image: url('../images/welcomeDoor1.jpg');
         width: 100%;
-        height: 1200px;
+        height: 1000px;
 }
 
 #footer {
@@ -39,9 +41,7 @@ body {
     color: #9b0707;
 }
 
-#searchReturn {
-    margin-top: 10px;
-}
+
 /* --------------------------Main Page Only------------------------------------*/
 
 .entry-box {
@@ -72,24 +72,12 @@ body {
     font-kerning: normal;
 }
 
-/*.modifiedContainer {
+.modifiedContainer {
     max-height: 700px;
 }
-*/
-#zip {
+
+.zip {
     background-color: white;
-    margin:0 auto;
-    width: 700px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-}
-
-#mainContainer {
-    height: 950px;
-}
-
-#zipCode {
-    width: 85px;
 }
 /* -----------------------------------------Search Page Only------------------------------------*/
 
@@ -169,32 +157,13 @@ body {
 .form-group {
     font-size: 12px;
 }
-#zip-code {
-    width: 65px;
 
-}
-
-#zip {
-    width: 700px;
-    height:100px;
-    padding-top: 15px;
- 
-}
-
-#zipText{
-      font-size: 18px;    
-}
-
-#searchContainer {
-    height: 800px;
-}
 /* ----------------------- OUR TEAM PAGE -----------------------  */
 
 
 
 #ourteam {
     font-family: 'Cherry Cream Soda', cursive;
-
 }
 
 
@@ -206,9 +175,6 @@ body {
     display: none;
 }
 
-.teamContainer {
-    height: 700px;
-}
 /* ----------------------- NEIGHBORHOOD PAGE ----------------------- */
 
 #neighborPost {
@@ -240,9 +206,5 @@ body {
 /* ---------------------RESULTS TABLE----------------------------- */
 
 #resultsTable {
-
-}
-
-#eventResults {
-    margin-left: 20px;
+height: 300px;
 }
