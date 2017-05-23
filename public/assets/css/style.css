@@ -56,6 +56,7 @@ body {
 }
 
 
+
 .main-section {
     /*background-color:rgba(44, 36, 36, 0.81);*/
     max-width: 900px;
@@ -74,7 +75,7 @@ body {
 }
 
 .modifiedContainer {
-    max-height: 700px;
+    max-height: 1200px;
 }
 
 
@@ -82,7 +83,9 @@ body {
     height: 1050px;
 }
 
-
+#zipCodeLogIn {
+    width: 85px;
+}
 /* -----------------------------------------Search Page Only------------------------------------*/
 
 .search-icon {
@@ -162,7 +165,25 @@ body {
     font-size: 12px;
 }
 
+#zip {
+    background-color: white;
+    margin:0 auto;
+    width: 700px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    width: 700px;
+    height:100px;
+    padding-top: 15px;
+}
 
+#zipText{
+      font-size: 18px;    
+}
+
+#zip-code {
+    width: 70px;
+
+}
 /* ----------------------- OUR TEAM PAGE -----------------------  */
 
 
@@ -220,7 +241,7 @@ body {
 
 /* ---------------------RESULTS TABLE----------------------------- */
 
-#resultsTable {
+/*#resultsTable {
 
 height: 300px;
 }
@@ -229,7 +250,7 @@ height: 300px;
 
 #eventResults {
     margin-left: 20px;
-}
+}*/
 
 /*-----------------------SHOPPING PAGE----------------------------*/
 #shopResults {
@@ -242,10 +263,33 @@ height: 300px;
     /*height: 3000px;*/
     height: 2900px;
 }
-}
 
-.school-panel{
+
+ .school-panel{
     /*height:3000px;*/
-    height:2480px;
+    height:3900px;
+} 
+
+.schoolContainer {
+     height: 4200px;
 }
 
+
+/*--------------------------results panel---------------------------*/
+ .results-panel{
+    /*height:3000px;*/
+    height:900px;
+} 
+
+/*--------------------------events panel---------------------------*/
+.events-panel {
+    height:1200px;
+}
+
+.eventsContainer {
+    height:1500px;
+}
+
+#eventResults {
+    margin-left: 20px;
+}
