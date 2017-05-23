@@ -1,6 +1,8 @@
 /* -------------------------------------FONTS USED-----------------------------------
-font-family: 'Kalam', cursive;
+
 font-family: 'Luckiest Guy', cursive;
+font-family: 'Delius Unicase', cursive;
+font-family: 'Neucha', cursive;
 font-family: 'Cherry Cream Soda', cursive;*/
 /* -------------------------------------All Pages----------------------------------*/
 body {
@@ -31,6 +33,7 @@ body {
 .container {
         background-image: url('../images/welcomeDoor1.jpg');
         width: 100%;
+
         height: 1600px;
 }
 
@@ -39,9 +42,7 @@ body {
     color: #9b0707;
 }
 
-#searchReturn {
-    margin-top: 10px;
-}
+
 /* --------------------------Main Page Only------------------------------------*/
 
 .entry-box {
@@ -53,6 +54,7 @@ body {
     width: 500px;
     margin:0 auto;
 }
+
 
 
 .main-section {
@@ -72,23 +74,18 @@ body {
     font-kerning: normal;
 }
 
-/*.modifiedContainer {
-    max-height: 700px;
+.modifiedContainer {
+    max-height: 1200px;
 }
-*/
-#zip {
-    background-color: white;
-    margin:0 auto;
-    width: 700px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-}
+
 
 #mainContainer {
     height: 1050px;
 }
 
-
+#zipCodeLogIn {
+    width: 85px;
+}
 /* -----------------------------------------Search Page Only------------------------------------*/
 
 .search-icon {
@@ -167,24 +164,25 @@ body {
 .form-group {
     font-size: 12px;
 }
-#loc-code {
-    width: 70px;
-
-}
 
 #zip {
+    background-color: white;
+    margin:0 auto;
+    width: 700px;
+    border-radius: 10px;
+    margin-bottom: 25px;
     width: 700px;
     height:100px;
     padding-top: 15px;
- 
 }
 
 #zipText{
       font-size: 18px;    
 }
 
-#searchContainer {
-    height: 800px;
+#zip-code {
+    width: 70px;
+
 }
 /* ----------------------- OUR TEAM PAGE -----------------------  */
 
@@ -192,7 +190,6 @@ body {
 
 #ourteam {
     font-family: 'Cherry Cream Soda', cursive;
-
 }
 
 
@@ -204,9 +201,7 @@ body {
     display: none;
 }
 
-#teamContainer {
-    height: 700px;
-}
+
 /* ----------------------- NEIGHBORHOOD PAGE ----------------------- */
 
 #neighborPost {
@@ -246,13 +241,16 @@ body {
 
 /* ---------------------RESULTS TABLE----------------------------- */
 
-#resultsTable {
+/*#resultsTable {
+
+height: 300px;
+}
 
 }
 
 #eventResults {
     margin-left: 20px;
-}
+}*/
 
 /*-----------------------SHOPPING PAGE----------------------------*/
 #shopResults {
@@ -265,10 +263,33 @@ body {
     /*height: 3000px;*/
     height: 2900px;
 }
-}
 
-.school-panel{
+
+ .school-panel{
     /*height:3000px;*/
-    height:2480px;
+    height:3900px;
+} 
+
+.schoolContainer {
+     height: 4200px;
 }
 
+
+/*--------------------------results panel---------------------------*/
+ .results-panel{
+    /*height:3000px;*/
+    height:900px;
+} 
+
+/*--------------------------events panel---------------------------*/
+.events-panel {
+    height:1200px;
+}
+
+.eventsContainer {
+    height:1500px;
+}
+
+#eventResults {
+    margin-left: 20px;
+}

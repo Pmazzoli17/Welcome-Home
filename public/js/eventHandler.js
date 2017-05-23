@@ -27,6 +27,19 @@ $.ajax({
 	              var address=response.events.event[i].venue_address;
 	              //var imgURL=results.events.event[0].image.thumb.url;
 	              //formatting date to strip off extra GMT time
+<<<<<<< HEAD
+				  var myDate = new Date(d);
+				  var date = new Date(myDate);
+				  myDate = new Date(myDate).toUTCString();
+				  myDate = myDate.split(' ').slice(0,4).join(' ');
+
+				  //added time to new field
+				  var time = d;
+				  time = d.split(' ').slice(1,2).join(' ');
+
+
+	$('#eventResults').append("<br><br><b>Event:</b> " + eventName + " - will be in <b>" + cityName + "</b><br> <b>Date: </b>" + myDate + "&nbsp&nbsp&nbsp&nbsp <b>Time: </b>" + time + "<br> <b>Location: </b>" + address);
+=======
 	// 			  var myDate = new Date(d);
 	// 			  var date = new Date(myDate);
 	// 			  myDate = new Date(myDate).toUTCString();
@@ -38,6 +51,7 @@ $.ajax({
 
 
 	// $('#eventResults').append("<br><br><b>Event:</b> " + eventName + " - will be in <b>" + cityName + "</b><br> <b>Date: </b>" + myDate + "&nbsp&nbsp&nbsp&nbsp <b>Time: </b>" + time + "<br> <b>Location: </b>" + address);
+>>>>>>> master
 	                                   
 	          }  // end of for LOOP
 
